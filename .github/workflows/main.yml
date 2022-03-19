@@ -13,10 +13,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Debug
-        uses: ashur/issue-actions/actions/debug@v0.1.6
-        id: debug
-
       - name: Save Link
         uses: ashur/issue-actions/actions/issue-link@v0.1.6
         id: save-link
@@ -24,3 +20,17 @@ jobs:
           folder: "./src/_data/links"
           issue-template: "link.yml"
           hash-property-name: "url"
+
+      - name: Commit files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add *
+          git commit -m "Adding data for #${{ env.IssueNumber }}"
+          git push
+
+      - name: Close issue
+        uses: peter-evans/close-issue@v1
+        with:
+          issue-number: "${{ env.IssueNumber }}"
+          comment: "Added data file for #${{ env.IssueNumber }}"
