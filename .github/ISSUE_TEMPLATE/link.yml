@@ -4,15 +4,15 @@ title: "[Link]"
 labels: ["link"]
 body:
   - type: input
-	id: url
-	attributes:
-	  label: URL
-	  placeholder: https://example.com
-	validations:
-	  required: true
+  id: url
+  attributes:
+    label: URL
+    placeholder: https://example.com
+  validations:
+    required: true
   - type: textarea
-	id: description
-	attributes:
-	  label: Description
-	validations:
-	  required: true
+  id: description
+  attributes:
+    label: Description
+  validations:
+    required: true
