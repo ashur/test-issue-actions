@@ -19,6 +19,9 @@ body:
   - type: input
     id: tags
     attributes:
-      label: A comma-separated list of tags
+      label: Tags
+      description: A comma-separated list of tags
   - type: input
     id: via
+    attributes:
+      label: Via
