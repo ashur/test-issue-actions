@@ -1,0 +1,16 @@
+---
+permalink: /index.html
+---
+<main>
+	<h1>{{ metadata.title }}</h1>
+
+	{%- set sortedLinks = links | flatten('title') | sort(true,null,"createdAt") -%}
+	{% for link in sortedLinks -%}
+	<section>
+		<h2>
+			<a href="{{ link.url }}">{{ link.title }}</a>
+		</h2>
+		<p>{{ link.description | markdown | safe }}</p>
+	</section>
+	{%- endfor %}
+</main>

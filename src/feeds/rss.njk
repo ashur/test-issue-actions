@@ -1,0 +1,5 @@
+---
+permalink: /feed.xml
+---
+{%- set sortedLinks = links | flatten('title') | sort(true,null,"createdAt") -%}
+{{ sortedLinks | feed('rss2') | safe }}
