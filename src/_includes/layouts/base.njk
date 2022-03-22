@@ -8,6 +8,22 @@
 
 	<link rel="alternate" type="application/rss+xml" href="/feed.xml">
 	<link rel="alternate" type="application/json" href="/feed.json">
+
+	<style>
+		ul {
+			list-style: none;
+			margin: 0;
+		}
+		ul[class] li {
+			display: inline;
+		}
+
+		.post__tags li {
+			background: #eee;
+			border-radius: 0.125em;
+			padding: 0.125em 0.375em;
+		}
+	</style>
 </head>
 <body>
 	{{ content | safe }}

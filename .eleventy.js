@@ -49,6 +49,7 @@ module.exports = (eleventyConfig) =>
 
 	eleventyConfig.addFilter("flatten", require('./src/_eleventy/filters/flatten'));
 	eleventyConfig.addFilter("markdown", string => md.render(string));
+	eleventyConfig.addFilter("split", (string, separator) => string.split(separator) );
 	eleventyConfig.addFilter("values", object => Object.values(object));
 
 	/* Plugins */
