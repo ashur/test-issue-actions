@@ -19,7 +19,6 @@ jobs:
         with:
           folder: "./src/_data/links"
           issue-template: "link.yml"
-          hash-property-name: "url"
 
       - name: Commit files
         run: |
