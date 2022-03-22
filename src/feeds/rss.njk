@@ -2,4 +2,4 @@
 permalink: /feed.xml
 ---
 {%- set sortedLinks = links | flatten('title') | sort(true,null,"createdAt") -%}
-{{ sortedLinks | feed('rss2') | safe }}
+{{ sortedLinks | feed(metadata, 'rss2') | safe }}

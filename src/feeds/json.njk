@@ -2,4 +2,4 @@
 permalink: /feed.json
 ---
 {%- set sortedLinks = links | flatten('title') | sort(true,null,"createdAt") -%}
-{{ sortedLinks | feed('json1') | safe }}
+{{ sortedLinks | feed(metadata, 'json1') | safe }}
