@@ -10,12 +10,22 @@
 	<link rel="alternate" type="application/json" href="/feed.json">
 
 	<style>
+		main {
+			line-height: 1.5;
+		}
+
 		ul {
 			list-style: none;
 			padding: 0;
 		}
 		ul[class] li {
 			display: inline;
+		}
+
+		.container {
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 32rem;
 		}
 
 		.post__tags li {
@@ -31,6 +41,8 @@
 	</style>
 </head>
 <body>
-	{{ content | safe }}
+	<main class="container">
+		{{ content | safe }}
+	</main>
 </body>
 </html>

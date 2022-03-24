@@ -1,23 +1,21 @@
 ---
 permalink: /index.html
 ---
-<main>
-	<h1>{{ metadata.title }}</h1>
+<h1>{{ metadata.title }}</h1>
 
-	{%- set sortedLinks = links | flatten('title') | sort(true,null,"createdAt") -%}
-	{% for link in sortedLinks -%}
-	<section class="post">
-		<h2>
-			<a href="{{ link.url }}">{{ link.title }}</a>
-		</h2>
-		<p>{{ link.description | markdown | safe }}</p>
-		{% if link.tags %}
-		<ul class="post__tags">
-			{% for tag in (link.tags | split(',') | sort) %}
-			<li>{{ tag }}</li>
-			{% endfor %}
-		</ul>
-		{% endif %}
-	</section>
-	{%- endfor %}
-</main>
+{%- set sortedLinks = links | flatten('title') | sort(true,null,"createdAt") -%}
+{% for link in sortedLinks -%}
+<article class="post" data-filter="">
+	<h2>
+		<a href="{{ link.url }}">{{ link.title }}</a>
+	</h2>
+	<p>{{ link.description | markdown | safe }}</p>
+	{% if link.tags %}
+	<ul class="post__tags">
+		{% for tag in (link.tags | split(',') | sort) %}
+		<li><a href="/tags/{{ tag }}">{{ tag }}</a></li>
+		{% endfor %}
+	</ul>
+	{% endif %}
+</article>
+{%- endfor %}
