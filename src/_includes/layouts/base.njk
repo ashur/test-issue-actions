@@ -23,6 +23,13 @@
 			font-weight: normal;
 		}
 
+		h1,
+		h2,
+		p,
+		ul {
+			margin: 0;
+		}
+
 		ul {
 			list-style: none;
 			padding: 0;
@@ -37,7 +44,19 @@
 			max-width: 32rem;
 		}
 
+		.container > * {
+			padding: 1em;
+		}
+
+		.stack-sm > * + * {
+			margin-top: 0.5em;
+		}
+
 		.stack > * + * {
+			margin-top: 1em;
+		}
+
+		.stack-lg > * + * {
 			margin-top: 3em;
 		}
 
@@ -54,8 +73,14 @@
 	</style>
 </head>
 <body>
-	<main class="container stack">
-		{{ content | safe }}
-	</main>
+	<div class="container">
+		<header class="stack-sm">
+			<h1>{{ metadata.title }}</h1>
+			<p>{{ metadata.description }}</p>
+		</header>
+		<main class="stack-lg">
+			{{ content | safe }}
+		</main>
+	</div>
 </body>
 </html>
