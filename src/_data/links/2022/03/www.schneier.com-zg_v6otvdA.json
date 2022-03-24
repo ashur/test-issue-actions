@@ -1,8 +1,8 @@
 {
   "title": "Developer Sabotages Open-Source Software Package",
-  "createdAt": "2022-03-22T18:50:52Z",
+  "createdAt": "2022-03-24T14:25:34Z",
   "url": "https://www.schneier.com/blog/archives/2022/03/developer-sabotages-open-source-software-package.html",
-  "description": "> It constantly surprises non-computer people how much critical software is dependent on the whims of random programmers who inconsistently maintain software libraries.",
-  "tags": "See also [XKCD 2347](https://xkcd.com/2347/)",
-  "via": "development,war"
+  "description": "Bruce Schneier:\n\n> It constantly surprises non-computer people how much critical software is dependent on the whims of random programmers who inconsistently maintain software libraries.\n\nSee also [XKCD](https://xkcd.com/2347/).",
+  "tags": "security,software",
+  "via": "_No response_"
 }
