@@ -28,6 +28,10 @@
 			max-width: 32rem;
 		}
 
+		.stack > + * * {
+			margin-top: 3em;
+		}
+
 		.post__tags li {
 			background: #eee;
 			border-radius: 0.125em;
@@ -41,7 +45,7 @@
 	</style>
 </head>
 <body>
-	<main class="container">
+	<main class="container stack">
 		{{ content | safe }}
 	</main>
 </body>
