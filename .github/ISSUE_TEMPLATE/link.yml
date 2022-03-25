@@ -1,7 +1,7 @@
-name: Link
-description: Save Link
+name: Save Link
+description: Publish a link, or start a new draft
 title: "[Link]"
-labels: ["link"]
+labels: ["link", "draft"]
 body:
   - type: input
     id: url
