@@ -25,8 +25,8 @@ body:
     id: via
     attributes:
       label: Via
-  - type: markdown
+  - type: input
     id: image
     attributes:
       label: Image
-      value: "### Image\n\n> Optional, should be attached after the issue is created"
+      placeholder: Leave blank
