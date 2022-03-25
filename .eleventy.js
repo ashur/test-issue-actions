@@ -41,6 +41,7 @@ module.exports = (eleventyConfig) =>
 			    description: md.render(post.description),
 			    content: md.render(post.description),
 			    date: new Date(post['createdAt']),
+				image: post.image,
 			});
 		});
 
