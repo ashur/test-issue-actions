@@ -7,6 +7,9 @@ permalink: /index.html
 	<h2>
 		<a href="{{ link.url }}">{{ link.title }}</a>
 	</h2>
+	{% if link.image %}
+	{{ link.image | markdown | safe }}
+	{% endif %}
 	<p>{{ link.description | markdown | safe }}</p>
 	{% if link.tags %}
 	<ul class="post__tags">
