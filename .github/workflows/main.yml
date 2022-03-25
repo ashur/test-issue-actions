@@ -8,7 +8,7 @@ jobs:
   save_link:
     runs-on: ubuntu-latest
     name: Save Link
-    if: contains( github.event.issue.labels.*.name, 'link') && github.event.issue.user.login == github.event.repository.owner.login
+    if: contains( github.event.issue.labels.*.name, 'link') && !contains( github.event.issue.labels.*.name, 'draft') && github.event.issue.user.login == github.event.repository.owner.login
     steps:
       - name: Checkout
         uses: actions/checkout@v2
