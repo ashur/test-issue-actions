@@ -34,15 +34,21 @@ module.exports = (eleventyConfig) =>
 		});
 
 		posts.forEach(post => {
-			feed.addItem({
-			    title: post.title,
-			    id: post.url,
-			    link: post.url,
-			    description: md.render(post.description),
-			    content: md.render(post.description),
-			    date: new Date(post['createdAt']),
-				image: post.image,
-			});
+			const feedItem = {
+				title: post.title,
+				id: post.url,
+				link: post.url,
+				description: md.render(post.description),
+				content: md.render(post.description),
+				date: new Date(post['createdAt']),
+			};
+
+			if (post.image) {
+				const [match0, imageUrl] = post.image.match(/!\[[^\]]*\]\(([^\(]+)\)/);
+				feedItem.image = imageUrl;
+			}
+
+			feed.addItem(feedItem);
 		});
 
 		return feed[format]();
