@@ -26,4 +26,5 @@ body:
     attributes:
       label: Via
   - type: markdown
-    value: "### Image\n\n> Optional, should be attached after the issue is created"
+    attributes:
+      value: "### Image\n\n> Optional, should be attached after the issue is created"
