@@ -3,6 +3,7 @@ on:
     types:
       - opened
       - edited
+      - labeled
 
 jobs:
   save_link:
