@@ -1,6 +1,6 @@
 name: Save Link
 description: Publish a link, or start a new draft
-title: "[Link]"
+title: "[Link Title]"
 labels: ["link", "draft"]
 body:
   - type: input
@@ -25,3 +25,6 @@ body:
     id: via
     attributes:
       label: Via
+  - type: markdown
+    attributes:
+      value: "### Image\n\n> Edit issue and insert image"
