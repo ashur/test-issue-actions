@@ -43,9 +43,8 @@ module.exports = (eleventyConfig) =>
 				date: new Date(post['createdAt']),
 			};
 
-			if (post.image) {
-				const [match0, imageUrl] = post.image.match(/!\[[^\]]*\]\(([^\(]+)\)/);
-				feedItem.image = imageUrl;
+			if (post._metadata?.images) {
+				feedItem.image = post._metadata.images[0].src;
 			}
 
 			feed.addItem(feedItem);
