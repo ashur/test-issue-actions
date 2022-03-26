@@ -26,6 +26,6 @@ body:
     attributes:
       label: Via
   - type: textarea
-      id: image
-      attributes:
-        label: Image
+    id: image
+    attributes:
+      label: Image
