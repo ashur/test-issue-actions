@@ -3,13 +3,13 @@ permalink: /index.html
 ---
 {%- set sortedLinks = links | flatten('title') | sort(true,null,"createdAt") -%}
 {% for link in sortedLinks -%}
-<article class="stack post" data-filter="">
+<article class="stack-sm post" data-filter="">
+	{% if link._metadata.images %}
+	<img alt="{{ link._metadata.images[0].alt }}" src="{{ link._metadata.images[0].src }}" />
+	{% endif %}
 	<h2>
 		<a href="{{ link.url }}">{{ link.title }}</a>
 	</h2>
-	{% if link.image %}
-	{{ link.image | markdown | safe }}
-	{% endif %}
 	<p>{{ link.description | markdown | safe }}</p>
 	{% if link.tags %}
 	<ul class="post__tags">
