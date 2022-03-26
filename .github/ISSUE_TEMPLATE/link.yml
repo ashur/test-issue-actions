@@ -16,16 +16,11 @@ body:
       label: Description
     validations:
       required: true
-  - type: input
-    id: tags
-    attributes:
-      label: Tags
-      description: A comma-separated list of tags
-  - type: input
-    id: via
-    attributes:
-      label: Via
-  - type: textarea
-    id: image
-    attributes:
-      label: Image
+- type: textarea
+  id: image
+  attributes:
+    label: Image
+- type: input
+  id: via
+  attributes:
+    label: Via
