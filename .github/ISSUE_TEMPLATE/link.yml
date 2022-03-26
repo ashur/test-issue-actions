@@ -25,6 +25,7 @@ body:
     id: via
     attributes:
       label: Via
-  - type: markdown
-    attributes:
-      value: "### Image\n\n_No response_"
+  - type: textarea
+      id: image
+      attributes:
+        label: Image
