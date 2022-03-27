@@ -1,8 +1,16 @@
 {
   "title": "The stop-motion animation of Guldies",
   "createdAt": "2022-03-27T16:20:27Z",
-  "_metadata": {},
+  "_metadata": {
+    "images": [
+      {
+        "alt": "A handful of purplish clay cubes momentarily at rest",
+        "src": "https://user-images.githubusercontent.com/3238096/160290979-2ee94f07-1077-425d-8d5e-78f366b27673.jpeg"
+      }
+    ]
+  },
   "url": "https://youtube.com/watch?v=tZqIQmdSa1E",
   "description": "The claymation physics in “DISTORTION” are unlike anything I’ve ever seen, equal parts realistic and cartoonish.",
+  "image": "![A handful of purplish clay cubes momentarily at rest](https://user-images.githubusercontent.com/3238096/160290979-2ee94f07-1077-425d-8d5e-78f366b27673.jpeg)",
   "via": "[The Studio Neat Gazette](https://www.studioneat.com/pages/gazette)"
 }
