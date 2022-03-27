@@ -10,7 +10,13 @@ permalink: /index.html
 	<h2>
 		<a href="{{ link.url }}">{{ link.title }}</a>
 	</h2>
+
 	<p>{{ link.description | markdown | safe }}</p>
+
+	{% if link.via %}
+	<p class="post__via">Via {{ link.via | markdown | safe | replace('<p>','') | replace('</p>','') }}</p>
+	{% endif %}
+
 	{% if link.tags %}
 	<ul class="post__tags">
 		{% for tag in (link.tags | split(',') | sort) %}
